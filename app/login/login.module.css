@@ -6,8 +6,100 @@
   justify-content: center;
 }
 
-.eyeIcon {
-  width: 8px;
-  height: 8px;
-  font-size: 15px;
+.formStyle {
+  width: 90%;
+  row-gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formHeader {
+  text-align: center;
+}
+
+.inptsContainer {
+  width: 100%;
+  row-gap: 30px;
+  display: flex;
+  padding: 5px 0px;
+  flex-direction: column;
+}
+
+.inptErrContainer {
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+.inptDiv {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding: 2px 0px;
+  align-items: center;
+  height: fit-content;
+  border-radius: 10px;
+  background: #8080802f;
+  justify-content: space-between;
+}
+
+.inpt {
+  width: 80%;
+  border: none;
+  color: black;
+  outline: none;
+  font-size: 18px;
+  padding: 20px 0px 20px 20px;
+  background-color: transparent;
+}
+
+.iconContainer {
+  width: 20%;
+  padding: 7px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.633);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #2a2626c8;
+}
+.err {
+  padding: 0px 4px;
+  color: red;
+  font-weight: 500;
+}
+
+.submitBtnContainer {
+  width: 100%;
+  display: flex;
+  row-gap: 15px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submitButton {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.5s;
+  color: rgba(0, 0, 0, 0.659);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 0, 0.897);
+}
+
+.submitButton:hover {
+  scale: 1.05;
+}
+
+.linkText {
+  color: black;
+  font-weight: 800;
+  text-decoration: none;
 }
