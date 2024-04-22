@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <main className={styles.container}>
       <form className={styles.formStyle}>
-        <h1 className={styles.formHeader}>Login</h1>
+        <h1 className={styles.formHeader}>Welcome Back!</h1>
 
         <aside className={styles.inptsContainer}>
           <div className={styles.inptErrContainer}>

@@ -7,7 +7,7 @@ const SignUp = () => {
   return (
     <main className={styles.container}>
       <form className={styles.formStyle}>
-        <h1 className={styles.formHeader}>Sign Up</h1>
+        <h1 className={styles.formHeader}>Create an Account</h1>
 
         <aside className={styles.inptsContainer}>
           <div className={styles.inptErrContainer}>
