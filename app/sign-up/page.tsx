@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./login.module.css";
+import styles from "../login/login.module.css";
 import { FaRegEye, FaUser } from "react-icons/fa";
 import Link from "next/link";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <main className={styles.container}>
       <form className={styles.formStyle}>
-        <h1 className={styles.formHeader}>Login</h1>
+        <h1 className={styles.formHeader}>Sign Up</h1>
 
         <aside className={styles.inptsContainer}>
           <div className={styles.inptErrContainer}>
@@ -49,9 +49,9 @@ const Login = () => {
           </button>
 
           <p>
-            Dont have an account?{" "}
-            <Link className={styles.linkText} href="/sign-up">
-              Sign Up
+            Click here to{" "}
+            <Link className={styles.linkText} href="/login">
+              Login
             </Link>
           </p>
         </div>
@@ -60,4 +60,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
