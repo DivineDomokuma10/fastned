@@ -1,0 +1,21 @@
+.button {
+  border: none;
+  display: flex;
+  padding: 12px;
+  color: #333;
+  column-gap: 10px;
+  transition: 0.5s;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button p {
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.button:hover {
+  scale: 1.02;
+}

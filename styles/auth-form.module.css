@@ -67,6 +67,7 @@
   height: 20px;
   color: #2a2626c8;
 }
+
 .err {
   padding: 0px 4px;
   color: red;
@@ -95,11 +96,22 @@
 }
 
 .submitButton:hover {
-  scale: 1.05;
+  scale: 1.02;
 }
 
 .linkText {
   color: black;
   font-weight: 800;
   text-decoration: none;
+}
+
+@media (orientation: landscape) {
+  .formStyle {
+    width: 30%;
+    row-gap: 20px;
+  }
+
+  .inptsContainer {
+    row-gap: 15px;
+  }
 }

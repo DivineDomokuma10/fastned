@@ -1,73 +1,53 @@
-import React from "react";
-import styles from "../login/login.module.css";
-import { FaRegEye, FaUser } from "react-icons/fa";
+"use client";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+import Button from "@/components/button";
+import AuthForm from "@/components/auth-form";
+import { signUpSchema } from "@/utils/schemas";
+import { SignupFormFields } from "@/utils/types";
+import { authFormStyles as styles } from "@/styles";
+import { SIGNUP_FORM_FIELDS } from "@/utils/constants";
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm<SignupFormFields>({
+    mode: "onChange",
+    reValidateMode: "onChange",
+    resolver: yupResolver(signUpSchema),
+  });
+
+  const router = useRouter();
+
+  const onSubmit = (data: SignupFormFields): void => {
+    console.log(data);
+    setTimeout(() => router.push("/dashboard"), 200);
+  };
+
   return (
     <main className={styles.container}>
-      <form className={styles.formStyle}>
-        <h1 className={styles.formHeader}>Create an Account</h1>
+      <AuthForm
+        errors={errors}
+        register={register}
+        onSubmit={onSubmit}
+        title="Create an account!"
+        handleSubmit={handleSubmit}
+        formFields={SIGNUP_FORM_FIELDS}
+      >
+        <Button text="Sign Up" disable={!isValid} />
 
-        <aside className={styles.inptsContainer}>
-          <div className={styles.inptErrContainer}>
-            <div className={styles.inptDiv}>
-              <input type="email" placeholder="Email" className={styles.inpt} />
-
-              <div className={styles.iconContainer}>
-                <FaUser className={styles.icon} />
-              </div>
-            </div>
-
-            <p className={styles.err}></p>
-          </div>
-
-          <div className={styles.inptErrContainer}>
-            <div className={styles.inptDiv}>
-              <input
-                type="password"
-                placeholder="Password"
-                className={styles.inpt}
-              />
-
-              <div className={styles.iconContainer}>
-                <FaRegEye className={styles.icon} />
-              </div>
-            </div>
-
-            <p className={styles.err}></p>
-          </div>
-
-          <div className={styles.inptErrContainer}>
-            <div className={styles.inptDiv}>
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                className={styles.inpt}
-              />
-
-              <div className={styles.iconContainer}>
-                <FaRegEye className={styles.icon} />
-              </div>
-            </div>
-
-            <p className={styles.err}></p>
-          </div>
-        </aside>
-
-        <div className={styles.submitBtnContainer}>
-          <button type="submit" className={styles.submitButton}>
-            Submit
-          </button>
-
-          <p>
-            Click here to{" "}
-            <Link className={styles.linkText} href="/login">
-              Login
-            </Link>
-          </p>
-        </div>
-      </form>
+        <p>
+          Click here to{" "}
+          <Link className={styles.linkText} href="/login">
+            Login
+          </Link>
+        </p>
+      </AuthForm>
     </main>
   );
 };

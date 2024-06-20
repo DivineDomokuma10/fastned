@@ -1,0 +1,129 @@
+.desktop_container {
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  justify-content: space-between;
+  box-shadow: 0px 2px 10px #00000047;
+}
+
+.desktop_header {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #2cd82c;
+}
+
+.desktop_tabContainer {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  padding: 10px;
+  row-gap: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.desktop_tab,
+.desktop_active {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  padding: 10px;
+  column-gap: 20px;
+  transition: 0.5s;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.desktop_logout {
+  width: 25px;
+  height: 25px;
+}
+
+.desktop_tab:hover,
+.desktop_active {
+  background-color: #2cd82cda;
+}
+
+.desktop_tabIcon {
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
+  color: #2cd82cda;
+}
+
+.desktop_link_text {
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.5s;
+  color: #373030e2;
+}
+
+.desktop_active:hover .desktop_tabIcon,
+.desktop_active:hover .desktop_link_text,
+.desktop_tab:hover .desktop_link_text,
+.desktop_tab:hover .desktop_tabIcon {
+  color: #000000d3;
+}
+.desktop_active .desktop_tabIcon {
+  color: #eee;
+}
+.mobile_container {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .desktop_container {
+    display: none;
+  }
+
+  .mobile_container {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 30px 20px;
+    justify-content: center;
+  }
+
+  .mobile_tabContainer {
+    width: 100%;
+    z-index: 50;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile_tab,
+  .mobile_active {
+    width: 35%;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile_active,
+  .mobile_tab:hover {
+    background-color: #2cd82cda;
+  }
+
+  .mobile_active:hover .mobile_tabIcon,
+  .mobile_tab:hover .mobile_tabIcon {
+    color: #000000d3;
+  }
+
+  .mobile_tabIcon {
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+    color: #808080e2;
+  }
+}
