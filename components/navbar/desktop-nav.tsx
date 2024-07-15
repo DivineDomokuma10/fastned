@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { BiArrowToLeft } from "react-icons/bi";
 import { FaHome, FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 
 import { NavProp } from ".";
 import Button from "../button";
-import { BiArrowToLeft } from "react-icons/bi";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 const DesktopNav = ({ styles, currentPath }: NavProp) => {
   const router = useRouter();

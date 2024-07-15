@@ -12,7 +12,7 @@
 .desktop_header {
   width: 100%;
   padding: 10px;
-  border-bottom: 2px solid #2cd82c;
+  border-bottom: 2px solid #ffd913;
 }
 
 .desktop_tabContainer {
@@ -44,14 +44,14 @@
 
 .desktop_tab:hover,
 .desktop_active {
-  background-color: #2cd82cda;
+  background-color: #ffd913da;
 }
 
 .desktop_tabIcon {
   width: 25px;
   height: 25px;
   transition: 0.5s;
-  color: #2cd82cda;
+  color: #ffd913da;
 }
 
 .desktop_link_text {
@@ -112,7 +112,7 @@
 
   .mobile_active,
   .mobile_tab:hover {
-    background-color: #2cd82cda;
+    background-color: #ffd913da;
   }
 
   .mobile_active:hover .mobile_tabIcon,

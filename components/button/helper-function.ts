@@ -1,4 +1,4 @@
-import { BUTTON_COLORS } from "@/utils/constants";
+import { BUTTON_COLORS } from "@/utils/enums";
 
 export const controlWidth = (width?: string) => {
   if (width) {

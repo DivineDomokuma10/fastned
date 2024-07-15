@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
+import { montserrat } from "@/fonts";
 import { buttonStyles as styles } from "@/styles";
 import { controlBgColor, controlWidth } from "./helper-function";
-import { montserrat } from "@/fonts";
 
 interface Props {
-  text: string;
+  text?: string;
   color?: string;
   width?: string;
   icon?: ReactNode;
@@ -26,8 +26,7 @@ const Button = ({ text, color, width, disable, icon, onPress }: Props) => {
       className={styles.button}
       disabled={disable === undefined ? false : disable}
     >
-      {icon ? icon : ""}
-      <p className={montserrat.className}>{text}</p>
+      {icon ? icon : <p className={montserrat.className}>{text}</p>}
     </button>
   );
 };

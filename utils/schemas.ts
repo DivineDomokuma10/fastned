@@ -1,5 +1,6 @@
-import { NUMBERS } from "@/utils/constants";
 import * as yup from "yup";
+
+import { NUMBERS } from "./enums";
 
 export const loginSchema = yup
   .object({

@@ -1,11 +1,12 @@
-import NavBar from "@/components/navbar";
-import React from "react";
+import Table from "@/components/table";
+import { TEST_ITEMS } from "@/utils/constants";
+import DashBoardWrapper from "./components/dashboard-wrapper";
 
 const DashBoard = () => {
   return (
-    <main>
-      <h1>DashBoard</h1>
-    </main>
+    <DashBoardWrapper pageTitle="View all locations">
+      <Table headerType="charger" rowData={TEST_ITEMS} />
+    </DashBoardWrapper>
   );
 };
 

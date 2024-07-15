@@ -6,12 +6,12 @@ import {
   UseFormRegister,
   UseFormHandleSubmit,
 } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash, FaUser } from "react-icons/fa";
 import { ReactElement, ReactNode, useState } from "react";
+import { FaRegEye, FaRegEyeSlash, FaUser } from "react-icons/fa";
 
+import { getInputType } from "./helper-function";
 import { FormFieldInterface } from "@/utils/types";
 import { authFormStyles as styles } from "@/styles";
-import { getInputType } from "./helper-function";
 
 interface Props<T extends FieldValues> {
   title: string;

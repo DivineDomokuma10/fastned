@@ -2,8 +2,8 @@
 import { usePathname } from "next/navigation";
 
 import MobileNav from "./mobile-nav";
-import { navbarStyles as styles } from "@/styles";
 import DesktopNav from "./desktop-nav";
+import { navbarStyles as styles } from "@/styles";
 
 export interface NavProp {
   currentPath: string;
